@@ -83,7 +83,7 @@ class seller:
 			print("Phone Number = ",i[1])
 			print("Age = ",i[2])
 			print("Gender = ",i[3])
-			print("Ticket prize = ",i[4])
+			print("Ticket prize = ",i[4],"$")
 			print("Seat number = ",i[5])
 			print("==========***========")
 
@@ -97,7 +97,7 @@ class seller:
 			print("Phone Number = ",i[1])
 			print("Age = ",i[2])
 			print("Gender = ",i[3])
-			print("Ticket prize = ",i[4])
+			print("Ticket prize = ",i[4],"$")
 			print("Seat number = ",i[5])
 			print("==========***========")
 
@@ -126,7 +126,7 @@ class buyer:
 		c_len = len(y)
 		seat_count = r_len * c_len
 		# caluclating the prize of ticket asper rules
-		if seat_count > 60 and row < (len(data)/2):
+		if seat_count > 60 and row <= (len(data)/2):
 			ticket_prize = 8
 		while True:
 			if 0 not in row_list:
@@ -159,7 +159,7 @@ class buyer:
 		data_query = "INSERT INTO buyer_info (name,phone,age,gender,ticket_prize,seat_number) VALUES ('{}','{}',{},'{}',{},'{}')".format(name,phone,age,gender,ticket_prize,seat_num)
 		cursur.execute(data_query)
 		con.commit()
-		print('seat booking successfull, your ticket prize is ',ticket_prize,' and your seat number is ',seat_num)
+		print('seat booking successfull, your ticket prize is',ticket_prize,"$",'and your seat number is',seat_num)
 				
 
 	def exit():
